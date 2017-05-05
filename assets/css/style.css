@@ -4,34 +4,120 @@ html, body{
   width:100%;
   margin:0px;
 }
-body{
-  background-image: url('../img/ros_background.jpg');
-  background-repeat:no-repeat;
-  background-position: top center;
-}
-.topborder{
-  height:6px;
-  width:100%;
-  background-color:#58ae8b;
-}
-.logo{
+#mcm_wrap{
   margin-left:auto;
   margin-right:auto;
-  width:150px;
-  height:75px;
-  margin-top:5px;
-  margin-bottom:10px;
+  width:800px;
+  height:550px;
+  margin-top:50px;
+  border:1px solid #10137c;
+  overflow:hidden;
 }
-#content{
-  height:700px;
-  width:920px;
-  margin-left:auto;
-  margin-right:auto;
-  background:#58ae8b;
+#mcm_content_area{
+  height:100%;
 }
-.footer{
-  width:100%;
-  height:5px;
-  background-color:black;
-  margin-top:13px;
+#mcm_title{
+  color:#8889be;
 }
+  #mcm_wrap input{
+    padding:12px;
+    border-radius:3px;
+    border:1px solid #8889be;
+    color:#10137c;
+    font-family: 'Roboto', sans-serif;
+    display:block;
+    width:55%;
+    margin-left:auto;
+    margin-right:auto;
+    margin-top:10px;
+  }
+    #mcm_loginbutton{
+      width:70%;
+      height:40px;
+      text-align:center;
+      background-color:#10137c;
+      color:#8889be !important;
+      text-transform:uppercase;
+      font-size:16px;
+    }
+    #mcm_forgotpasswrap{
+      width:200px;
+      margin-left:auto;
+      margin-right:auto;
+      margin-top:20px;
+    }
+    #mcm_forgotpass{
+      color:#8889be;
+      font-family: 'Roboto', sans-serif;
+      font-size:13px;
+      padding-top:15px;
+      text-decoration:underline;
+      text-align:center;
+      cursor:pointer;
+    }
+      #mcm_forgotpass:hover{
+        color:white;
+        transition:color 0.2s ease;
+      }
+  #mcm_topcarrier{
+    height:90px;
+    width:100%;
+    background-color:rgba(16, 19, 124, 1);
+  }
+  #mcm_logo{
+    width:100px;
+    margin-left:15px;
+    margin-top:15px;
+  }
+  #mcm_language{
+    float:right;
+    width:30px;
+    margin-top:20px;
+    margin-right:30px;
+    cursor:pointer;
+  }
+  #mcm_goback{
+    margin-bottom:-10px;
+    margin-left:5px;
+    margin-top:5px;
+    cursor:pointer;
+    width:30px; 
+  }
+  #mcm_language img{
+    border: 1px solid #8889be;
+    padding: 5px;
+    border-radius: 2px;
+  }
+  .mcm_flag-dk, #mcm_forgot_carrier{display:none;}
+#mcm_title{
+  text-align:center;
+  font-family: 'Roboto', sans-serif;
+}
+#mcm_form_carrier{
+  width:40%;
+  height:100%;
+  background-color:#d0d3d4;
+  float:left;
+}
+#mcm_news_carrier{
+  width:60%;
+  float:right;
+  height:100%;
+}
+  #mcm_news_inner{
+    width:90%;
+    height:67%;
+    margin-left:auto;
+    margin-right:auto;
+    overflow:hidden;
+    overflow-x:hidden;
+    overflow-y:scroll;
+  }
+    #mcm_newstext{
+      width:70%;
+      border-bottom:1px solid #ccc;
+      margin-left:auto;
+      margin-right:auto;
+      font-family: 'Roboto', sans-serif;
+      font-size:14px;
+    }
