@@ -5,12 +5,21 @@
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     <script src="assets/js/jquery-3.2.1.min.js"></script>
+
+    <style>
+    body{
+      width:100%;
+      height:90%;
+      background-image:url('assets/img/background.jpg');
+      background-size:cover;
+    }
+    </style>
 </head>
 <body>
 
   <div id="mcm_wrap">
     <div id="mcm_topcarrier">
-      <img id="mcm_logo" src="assets/img/roslogo.png" alt="Mall Campaign Manager Logo">
+      <a href="index.php"><img id="mcm_logo" src="assets/img/logo2.png" alt="Mall Campaign Manager Logo"></a>
       <div id="mcm_language">
         <img src="assets/img/dk.gif" class="mcm_flag-dk">
         <img src="assets/img/en.gif" class="mcm_flag-en">

@@ -4,20 +4,22 @@ html, body{
   width:100%;
   margin:0px;
 }
+*{font-family:'Roboto', sans-serif;}
 #mcm_wrap{
   margin-left:auto;
   margin-right:auto;
   width:800px;
   height:550px;
   margin-top:50px;
-  border:1px solid #10137c;
+  border:1px solid #003d4c;
   overflow:hidden;
 }
 #mcm_content_area{
   height:100%;
+  background-color:rgba(255,255,255, 0.7);
 }
 #mcm_title{
-  color:#8889be;
+  color:#222c37;
 }
   #mcm_wrap input{
     padding:12px;
@@ -35,10 +37,11 @@ html, body{
       width:70%;
       height:40px;
       text-align:center;
-      background-color:#10137c;
+      background-color:#003d4c;
       color:#8889be !important;
       text-transform:uppercase;
       font-size:16px;
+      cursor:pointer;
     }
     #mcm_forgotpasswrap{
       width:200px;
@@ -62,10 +65,10 @@ html, body{
   #mcm_topcarrier{
     height:90px;
     width:100%;
-    background-color:rgba(16, 19, 124, 1);
+    background-color:rgba(0, 61, 76, 0.8);
   }
   #mcm_logo{
-    width:100px;
+    width:156px;
     margin-left:15px;
     margin-top:15px;
   }
@@ -81,7 +84,7 @@ html, body{
     margin-left:5px;
     margin-top:5px;
     cursor:pointer;
-    width:30px; 
+    width:30px;
   }
   #mcm_language img{
     border: 1px solid #8889be;
@@ -121,3 +124,356 @@ html, body{
       font-family: 'Roboto', sans-serif;
       font-size:14px;
     }
+    /* Login Page End */
+    #menuwrap{
+      background-color:white;
+      width:518px;
+      height:60px;
+      float:right;
+    }
+    #topmenu ul, #topmenu li{
+      display:inline-block;
+      list-style-type:none;
+    }
+    #topmenu a{
+      text-decoration:none;
+      color:#222c37;
+    }
+    #topmenu ul{
+      float:right;
+      margin-top: 5px;
+      padding-left: 0px;
+      margin-left: 0px;
+      margin-right: 35px;
+    }
+    #topmenu li{
+      cursor:pointer;
+      padding:15px;
+      font-family: 'Roboto', sans-serif;
+    }
+    #topmenu li:hover{
+      background-color:#eee;
+      transition: all 0.5s ease;
+    }
+    #topmenu li:active{
+      background-color:#ccc;
+      transition: all 0.5s ease;
+    }
+    #loginbutton{
+      float:right;
+      background-color:#ffb515;
+      font-size:14px;
+      padding:8px 19px 9px;
+      border-bottom:1px solid rgba(0,0,0,0.25);
+      margin-right:2em;
+      font-weight:bold;
+      line-height:1;
+      text-decoration:none;
+      text-shadow:0 -1px 1px rgba(0,0,0,0.25);
+      border-radius:4px;
+      margin-top:14px;
+      margin-right:50px;
+    }
+    #loginbutton a{
+      text-decoration:none;
+      color:white;
+    }
+    #logocontainer{
+      margin-left:140px;
+      margin-top:180px;
+      float:left;
+    }
+    #top_container{
+      width:100%;
+      height:95%;
+      background-image:url('../img/background.jpg');
+      background-size:cover;
+    }
+    #actnow{
+      width:100%;
+      height:52px;
+      background-color:#003d4c;
+    }
+    #centeractnow{
+      width:450px;
+      margin-left:auto;
+      margin-right:auto;
+      font-family:'Roboto', sans-serif;
+    }
+    #centeractnow p{
+      color:white;
+      padding-top:17px;
+      margin:0px;
+      display:inline-block;
+    }
+    #centeractnow a{
+      display:inline-block;
+      margin-top:9px;
+    }
+    #infoboxes{
+      width:1034px;
+      height:414px;
+      margin-left:auto;
+      margin-right:auto;
+      margin-top:50px;
+      font-family:'Roboto', sans-serif;
+      color:#222c37;
+    }
+    .infobox a{
+      color:#222c37;
+    }
+    .infobox a:hover{
+      color:white;
+      transition: all 0.5s ease;
+    }
+    #infoboxes h1{
+      text-align:center;
+    }
+    #infoboxes img{
+      width:90px;
+      margin-left:100px;
+      margin-top:30px;
+    }
+    #infoboxes p{
+      margin:30px;
+    }
+    #currentcustomers{
+      width:100%;
+      background-color:#003d4c;
+      height:190px;
+    }
+    #currentcustomers h1{
+      color:white;
+      font-family:'Roboto', sans-serif;
+      margin-left:20px;
+      padding-top:20px;
+      padding-bottom:10px;
+    }
+    #currentcustomers img{
+      display:inline-block;
+      height:55px;
+      margin-left:44px;
+      cursor:pointer;
+    }
+    .infobox{
+      width:300px;
+      margin-left:20px;
+      margin-right:20px;
+      display:inline-block;
+      height:400px;
+      background-color:#eaedef;
+    }
+    #news h1{
+      margin-top:60px;
+      color:#222c37;
+      font-family:'Roboto',sans-serif;
+      text-align:center;
+    }
+    #news{
+      width:1030px;
+      margin-left:auto;
+      margin-right:auto;
+    }
+    .newsbox{
+      width:300px;
+      height:200px;
+      display:inline-block;
+      margin:0px 20px 0px 20px;
+    }
+    .newsbox p{
+      font-family:'Roboto', sans-serif;
+      text-align:center;
+      color:#222c37;
+      font-size:18px;
+    }
+    #footer{
+      width:100%;
+      height:200px;
+      background-color:#003d4c;
+      margin-top:60px;
+    }
+    #award{
+      width:150px;
+      float:right;
+      margin-top:40px;
+      margin-right:30px;
+    }
+    #award img{
+      width:150px;
+    }
+    .copyright{
+      color:white;
+      font-family:'Roboto', sans-serif;
+      padding-top:10px;
+      padding-left:10px;
+    }
+    #reactwrap{
+      width:300px;
+      height:50px;
+      margin-top:470px;
+      float:left;
+      margin-left:-350px;
+    }
+    #reactwrap h2{
+      color:#222c37;
+      font-family:'Roboto', sans-serif;
+    }
+    #reactbtn{
+      text-decoration:none;
+      font-family:'Roboto', sans-serif;
+      border:0;
+      background:#222c37;
+      color:#fff;
+      box-shadow: 0 4px 0 0 #01252e;
+      border-right:2px solid #01252e;
+      padding:6px 15px;
+      margin:5px;
+      transition: background-color .2s ease;
+      font-size:17px;
+      line-height:1.33;
+      border-radius:6px;
+      display:inline-block;
+      font-weight:normal;
+      text-align:center;
+      white-space:nowrap;
+      vertical-align:middle;
+      cursor:pointer;
+    }
+    #reactbtn:active{
+      background-color:#01252e;
+      box-shadow: 0 0 4px 0 #003d4c;
+    }
+
+/* Pricing Table */
+/*
+ * Developer: Alireza Eskandarpour Shoferi
+ * Designer: Wouter de Bres (dribbble.com/wdeb)
+ *
+ * Distributed under the terms of the MIT license
+ * http://opensource.org/licenses/MIT
+ */
+.wrapper {
+
+
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+  color: #9f9f9f;
+  font-size: 15px;
+}
+.package {
+  box-sizing: border-box;
+  width: 301px;
+  height: 380px;
+  border: 3px solid #e8e8e8;
+  border-radius: 7px;
+  display: inline-block;
+  padding: 24px;
+  text-align: center;
+  float: left;
+  -webkit-transition: margin-top 0.5s linear;
+  transition: margin-top 0.5s linear;
+  position: relative;
+  margin-right: 11px;
+}
+.package:hover {
+  margin-top: -30px;
+  -webkit-transition: margin-top 0.3s linear;
+  transition: margin-top 0.3s linear;
+}
+.name {
+  color: #565656;
+  font-weight: 300;
+  font-size: 3rem;
+  margin-top: -5px;
+}
+.price {
+  margin-top: 7px;
+  font-weight: bold;
+}
+.price::after {
+  font-weight: normal;
+}
+.wrapper hr {
+  background-color: #dedede;
+  border: none;
+  height: 1px;
+}
+.trial {
+  font-size: .9rem;
+  font-weight: 600;
+  padding: 2px 21px 2px 21px;
+  color: #003d4c;
+  border: 1px solid #e4e4e4;
+  display: inline-block;
+  border-radius: 15px;
+  background-color: white;
+  position: relative;
+  bottom: -20px;
+}
+.wrapper ul {
+  list-style: none;
+  padding: 0;
+  text-align: left;
+  margin-top: 29px;
+}
+.wrapper li {
+  margin-bottom: 15px;
+}
+.checkIcon {
+  font-family: "FontAwesome";
+  content: "\f00c";
+}
+.wrapper li::before {
+  font-family: "FontAwesome";
+  content: "\f00c";
+  font-size: 1.3rem;
+  color: #003d4c;
+  margin-right: 3px;
+}
+.brilliant {
+  border-color: #003d4c;
+}
+/* Triangle */
+.brilliant::before {
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 64px 64px 0 0;
+  border-color: #003d4c transparent transparent transparent;
+  position: absolute;
+  left: 0;
+  top: 0;
+  content: "";
+}
+.brilliant::after {
+  font-family: "FontAwesome";
+  content: "\f00c";
+  color: white;
+  position: absolute;
+  left: 9px;
+  top: 6px;
+  text-shadow: 0 0 2px #37c5b6;
+  font-size: 1.4rem;
+}
+
+/* Pricing Page */
+#otherpagemenu{
+  background-color:#003d4c;
+  width:100%;
+  height:57px;
+}
+.otherpage li{
+  color:white !important;
+}
+.otherpage li:hover{
+  background:none !important;
+}
+#mid_content h1, #mid_content h2{
+  color:#222c37;
+  text-align:center;
+}
+#mid_content h2{
+  font-size:16px;
+  margin-top:20px;
+  margin-bottom:50px;
+}
