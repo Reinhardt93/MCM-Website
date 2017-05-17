@@ -16,7 +16,7 @@
     </style>
 </head>
 <body>
-
+  <a href="panel/panel.php">fake login</a>
   <div id="mcm_wrap">
     <div id="mcm_topcarrier">
       <a href="index.php"><img id="mcm_logo" src="assets/img/logo2.png" alt="Mall Campaign Manager Logo"></a>

@@ -344,17 +344,7 @@ html, body{
       box-shadow: 0 0 4px 0 #003d4c;
     }
 
-/* Pricing Table */
-/*
- * Developer: Alireza Eskandarpour Shoferi
- * Designer: Wouter de Bres (dribbble.com/wdeb)
- *
- * Distributed under the terms of the MIT license
- * http://opensource.org/licenses/MIT
- */
 .wrapper {
-
-
   font-family: 'Open Sans', sans-serif;
   font-weight: 400;
   color: #9f9f9f;
@@ -476,4 +466,223 @@ html, body{
   font-size:16px;
   margin-top:20px;
   margin-bottom:50px;
+}
+
+/* Control Panel */
+#youare{
+  background-color:#333;
+  width:100%;
+  height:30px;
+}
+#youare p, #youare span, #youare a{
+  color:white;
+  font-family:'Roboto', sans-serif;
+  display:inline-block;
+  font-size: 13px;
+}
+#youare a{
+  text-decoration:none;
+}
+#youare p{
+  margin: 0px;
+  line-height: 2.3;
+  margin-left: 7px;
+}
+.c_logout{
+  color:#c80000 !important;
+  cursor:pointer;
+}
+.c_logout:hover{
+  color:white !important;
+  transition:color 0.2s ease;
+}
+#workPos{
+  text-decoration:underline;
+}
+#department{
+  float:right;
+  margin-right:10px !important;
+}
+#c_paneltop{
+  background-color:#003d4c;
+  height:100px;
+  width:100%;
+}
+  #ourlogo img, #shoplogo img{
+    width:150px;
+  }
+  #ourlogo{
+    float:left;
+    margin-left:50px;
+    margin-top:20px;
+  }
+  #shoplogo{
+    float:right;
+    margin-right:50px;
+    margin-top:20px;
+  }
+#c_menu li, #c_menu ul{
+  display:inline-block;
+  list-style-type:none;
+}
+#c_menu a{color:black;
+  transition:color 0.2s ease;
+    margin-right:10px;
+    border-bottom:1px solid #003d4c;
+}
+#c_menu a:hover{
+  color:#003d4c;
+}
+#c_menu{
+  width:100%;
+  height:50px;
+  background-color:#eee;
+  border-bottom:4px solid #003d4c;
+}
+#c_box{
+  width:1000px;
+  height:600px;
+  margin-left:auto;
+  margin-right:auto;
+  background-color:#eee;
+  border-bottom:4px solid #003d4c;
+}
+#user_info{
+  width:50%;
+  float:left;
+}
+#user_info li, #user_info ul{
+  list-style-type:none;
+}
+#user_info li{
+  margin:10px;
+}
+#user_info ul{
+  margin-top:50px;
+}
+#user_info i{
+  cursor:pointer;
+}
+#c_box h1, #c_box h2, #c_box p{
+  text-align:center;
+  color:#222c37;
+}
+.news_item{
+  width:400px;
+  margin-left:auto;
+  margin-right:auto;
+}
+#clockbox{
+  color: white;
+  line-height: 2.5;
+  font-size: 10px;
+  position: fixed;
+  left: 46%;
+  margin-top: -27px;
+}
+#actual_news{
+  height:500px;
+  width:500px;
+  float:right;
+  overflow:hidden;
+  overflow-y:scroll;
+}
+#c_latest_updates{
+  background-color:#003d4c;
+  width:100%;
+  height:89px;
+  margin-top:50px;
+  border-radius:5px 5px 0px 0px;
+}
+#c_latest_updates h1{
+  color:white;
+  padding:19px;
+  font-size:20px;
+  display:inline-block;
+  margin-right:171px;
+}
+.c_name{
+  float:left;
+}
+.c_updates{
+  float:right;
+}
+/* Add Campaign */
+
+.cf h1 {
+  text-align: center;
+  color: #a8a8a8;
+  text-shadow: 1px 1px 0 white;
+}
+
+#c_box form {
+  max-width: 600px;
+  text-align: center;
+  margin: 20px auto;
+}
+#c_box form, #c_box input,
+#c_box form, #c_box textarea {
+  border: 0;
+  outline: 0;
+  padding: 1em;
+  -moz-border-radius: 8px;
+  -webkit-border-radius: 8px;
+  border-radius: 8px;
+  display: block;
+  width: 92%;
+  margin-top: 1em;
+  font-family: 'Roboto', sans-serif;
+  resize: none;
+}
+#c_box form #input-submit {
+  color: white;
+  background: #e74c3c;
+  cursor: pointer;
+}
+#c_box form #input-submit:hover {
+  -moz-box-shadow: 0 1px 1px 1px rgba(170, 170, 170, 0.6);
+  -webkit-box-shadow: 0 1px 1px 1px rgba(170, 170, 170, 0.6);
+  box-shadow: 0 1px 1px 1px rgba(170, 170, 170, 0.6);
+}
+#c_box form, #c_box textarea {
+  height: 126px;
+}
+
+.half {
+  float: left;
+  width: 48%;
+  margin-bottom: 1em;
+}
+
+.right {
+  width: 50%;
+}
+
+.left {
+  margin-right: 2%;
+}
+
+@media (max-width: 480px) {
+  .half {
+    width: 100%;
+    float: none;
+    margin-bottom: 0;
+  }
+}
+/* Clearfix */
+.cf:before,
+.cf:after {
+  content: " ";
+  /* 1 */
+  display: table;
+  /* 2 */
+}
+
+.cf:after {
+  clear: both;
+}
+.numberappr{
+
+  border-top:2px solid green;
+  font-size:11px;
 }
