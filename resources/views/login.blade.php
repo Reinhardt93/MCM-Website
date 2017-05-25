@@ -16,6 +16,7 @@
     </style>
 </head>
 <body>
+
   <a href="panel">fake login</a>
   <div id="mcm_wrap">
     <div id="mcm_topcarrier">

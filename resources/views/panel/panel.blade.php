@@ -9,7 +9,7 @@
 </head>
 <body>
 
-<?php include("includes/panel_header.php");?>
+<?php include("includes/panel_header.blade.php");?>
 
   <div id="c_box">
     <div id="c_box_top"></div>

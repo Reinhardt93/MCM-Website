@@ -9,12 +9,13 @@
 </head>
 <body>
 
-<?php include("includes/panel_header.php");?>
+<?php include("includes/panel_header.blade.php");?>
 
   <div id="c_box">
     <div id="c_box_top"></div>
     <div id="c_latest_updates">
       <h1 class="c_name">Current Campaign(s)</h1>
+        <?php print_r(App::make("App\Http\Controllers\CampaignsController")->GetAllCampaigns()); ?>
     </div>
     <div id="user_info">
 

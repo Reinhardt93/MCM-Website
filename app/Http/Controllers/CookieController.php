@@ -16,13 +16,21 @@ class CookieController extends Controller {
    }
 
     public function getUsername(){
-        $cookie = cookie::get('userInfo');
-        return $cookie->message->username;
+    $cookie = cookie::get('userInfo');
+    if(isset($cookie)) {
+        return ', ' . $cookie->message->username;
+    } else {
+        return '';
     }
+}
 
-    public function getShopID(){
-        $cookie = cookie::get('ShopID');
-        return $cookie->message->shopID;
+    public function getUserRole(){
+        $cookie = cookie::get('userInfo');
+        if(isset($cookie)) {
+            return "You're logged in as <span id=\"workPos\">" . $cookie->message->userRole . '</span>';
+        } else {
+            return '';
+        }
     }
 }
 ?>

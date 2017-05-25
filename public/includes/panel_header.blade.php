@@ -1,6 +1,6 @@
 <div id="youare">
-<p>Welcome, <?php //echo App::make("App\Http\Controllers\CookieController")->getUsername(); ?>. You're logged in as
-  <span id="workPos">POSITION</span></p>
+  <p>Welcome<?php echo App::make("App\Http\Controllers\CookieController")->getUsername(); ?>.
+    <?php echo App::make("App\Http\Controllers\CookieController")->getUserRole();?></p>
     <a href="/" class="c_logout">(Log out)</a>
 
 <script type="text/javascript">
@@ -25,7 +25,7 @@
 </script>
 <div id="clockbox"></div>
 
-    <p id="department">Department: <span><?php //echo App::make("App\Http\Controllers\CookieController")->getShopID(); ?></span></p>
+
 </div>
 
 <div id="c_paneltop">
