@@ -15,10 +15,20 @@
     <div id="c_box_top"></div>
     <div id="c_latest_updates">
       <h1 class="c_name">Current Campaign(s)</h1>
-        <?php print_r(App::make("App\Http\Controllers\CampaignsController")->GetAllCampaigns()); ?>
     </div>
     <div id="user_info">
-
+      <?php
+      $data = App::make("App\Http\Controllers\CampaignsController")->GetAllCampaigns();
+      //print_r($data);
+      //json_decode($data);
+      //var_dump($data);
+      foreach($data as $item) {
+        foreach($item as $key) {
+         print_r($key);
+         echo "</br>";
+       };
+      };
+      ?>
     </div>
 
     <div id="actual_news">

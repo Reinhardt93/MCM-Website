@@ -10,10 +10,8 @@ class CampaignsController extends Controller{
         $client = new Client(['base_uri' => 'http://207.154.220.153/']);
         $res = $client->get('/shops');
         $res = json_decode($res->GetBody()->GetContents(), true);
-       // foreach ($array as $item){
-
-        //}
-        return $res;//->result[0];
+        $res = $res['result'];
+        return $res;
     }
 }
 ?>
