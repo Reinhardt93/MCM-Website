@@ -82,9 +82,12 @@ Route::get('/campaign', function () {
     if(is_null($cookie->getCookie())){
         return view('intro');
     }else{
+
         return view('panel.campaign');
     }
 });
+Route::post('/sendcampaignproposal', 'CampaignsController@SendCampaignProposal');
+
 Route::get('/companies', function () {
     $cookie = app('App\Http\Controllers\CookieController');
     if(is_null($cookie->getCookie())){
@@ -93,6 +96,8 @@ Route::get('/companies', function () {
         return view('panel.companies');
     }
 });
+
+
 Route::get('/my_campaign', function () {
     $cookie = app('App\Http\Controllers\CookieController');
     if(is_null($cookie->getCookie())){
