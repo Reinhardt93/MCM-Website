@@ -8,7 +8,7 @@ class CampaignsController extends Controller{
 
     public function GetAllCampaigns(){
         $client = new Client(['base_uri' => 'http://207.154.220.153/']);
-        $res = $client->get('/shops');
+        $res = $client->get('/campaigns/active');
         $res = json_decode($res->GetBody()->GetContents(), true);
         $res = $res['result'];
         return $res;
