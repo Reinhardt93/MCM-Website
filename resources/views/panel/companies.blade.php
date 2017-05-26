@@ -17,7 +17,21 @@
       <h1 class="c_name">Current Campaign(s)</h1>
     </div>
     <div id="user_info">
+      <?php
+      // Get the controller function data as $data
+      $data = App::make("App\Http\Controllers\shopsController")->GetAllShops();
 
+      // loop though the $data in the results array and access specific data as associative targeting
+      foreach($data as $item) {
+        echo "<div>";
+        echo "<div class='shopname'>" . $item['shopName'] . "</div>";
+        echo "<div class='desciption'>" . $item['description'] . "</div>";
+        echo "<div class='openingHours'>" . $item['openingHours'] . "</div>";
+        echo "<div class='phoneNumber'>" . $item['phoneNumber'] . "</div>";
+        echo "<div class='shopImage'> <img src=/img/" . $item['shopImage'] . "> </div>";
+        echo "</div>";
+      };
+      ?>
     </div>
 
     <div id="actual_news">
