@@ -34,7 +34,7 @@
       <input style="width:100%;padding:8px;" type="submit" value="Submit Campaign" id="reactbtn">
     </form> -->
 
-    {!! Form::open(['url' => '/sendcampaignproposal']) !!}
+    {!! Form::open(['url' => 'sendcampaignproposal']) !!}
       {!! Form::text('title', 'title', ['id' => 'title']) !!}
       {!! Form::text('image', 'image here', ['id' => 'image']) !!}
       {!! Form::text('description', 'description', ['id' => 'description']) !!}

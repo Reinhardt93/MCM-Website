@@ -6,13 +6,6 @@ use GuzzleHttp\Exception\GuzzleException;
 
 class CampaignsController extends Controller{
 
-    public function GetAllCampaigns(){
-        $client = new Client(['base_uri' => 'http://207.154.220.153/']);
-        $res = $client->get('/campaigns/active');
-        $res = json_decode($res->GetBody()->GetContents(), true);
-        $res = $res['result'];
-        return $res;
-    }
 
     public function SendCampaignProposal(){
 
@@ -28,17 +21,8 @@ class CampaignsController extends Controller{
             ]
         ]);
         if($res->getStatusCode() == 200){
-          return view('panel.campaign');
+          return return view('panel.campaign');
         }
-    }
-
-
-    public function GetAllProposedCampaigns(){
-        $client = new Client(['base_uri' => 'http://207.154.220.153/']);
-          $res = $client->get('/campaigns/proposal?api_token=a8b8acae610fafdaf48cb886fd67584235a68049');
-        $res = json_decode($res->GetBody()->GetContents(), true);
-        $res = $res['result'];
-        return $res;
     }
 }
 ?>

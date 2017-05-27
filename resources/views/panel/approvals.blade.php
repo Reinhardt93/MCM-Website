@@ -17,7 +17,19 @@
       <h1 class="c_name">Current Campaign(s)</h1>
     </div>
     <div id="user_info">
+      <?php
+      // Get the controller function data as $data
+      $data = App::make("App\Http\Controllers\CampaignsController")->GetAllProposedCampaigns();
 
+      // loop though the $data in the results array and access specific data as associative targeting
+      foreach($data as $item) {
+        echo "<div>";
+        echo "<div class='title'>" . $item['title'] . "</div>";
+        echo "<div class='desciption'>" . $item['description'] . "</div>";
+        echo "<div class='image'>" . $item['image'] . "</div>";
+        echo "</div>";
+      };
+      ?>
     </div>
 
     <div id="actual_news">

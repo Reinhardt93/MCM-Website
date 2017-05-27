@@ -40,13 +40,13 @@
   <ul>
     <a href="panel"><li>Information</li></a>
     <a href="workers"><li>Co-workers</li></a>
-    <a href="my_campaign"><li>My Campaigns</li></a>
+    <a href="my_campaign"><li>Current Campaigns</li></a>
     <a href="campaign"><li>Add New Campaign</li></a>
   </ul>
 
 <!-- Admin Menu -->
   <ul style="float:right;margin-right:30px;">
     <span class="numberappr">3</span> <a href="approvals"><li>Pending Approvals</li></a>
-    <a href="companies"><li>List of Companies</li></a>
+    <a href="companies"><li>List of Shops</li></a>
   </ul>
 </div>

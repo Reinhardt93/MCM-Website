@@ -14,7 +14,7 @@
   <div id="c_box">
     <div id="c_box_top"></div>
     <div id="c_latest_updates">
-      <h1 class="c_name">Welcome Back, NAME HERE</h1>
+      <h1 class="c_name">Welcome Back<?php echo App::make("App\Http\Controllers\CookieController")->getUsername(); ?></h1>
       <h1 class="c_updates">Latest Updates</h1>
     </div>
     <div id="user_info">
