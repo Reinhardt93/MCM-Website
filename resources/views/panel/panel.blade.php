@@ -21,42 +21,20 @@
 
     </div>
     <div id="actual_news">
-      <div class="news_item">
-        <h2>pølse</h2>
-        <p>fkpa sdfjklæ dasæklf pasdfæikl adsipæf iæasdf iawef jiawef jiaweif jaeiwf jewiafjiawejfjeawi fji wjeifj iwejif jiewafjiawejifjiwej i</p>
-      </div>
-      <div class="news_item">
-        <h2>pølse</h2>
-        <p>fkpa sdfjklæ dasæklf pasdfæikl adsipæf iæasdf iawef jiawef jiaweif jaeiwf jewiafjiawejfjeawi fji wjeifj iwejif jiewafjiawejifjiwej i</p>
-      </div>
-      <div class="news_item">
-        <h2>pølse</h2>
-        <p>fkpa sdfjklæ dasæklf pasdfæikl adsipæf iæasdf iawef jiawef jiaweif jaeiwf jewiafjiawejfjeawi fji wjeifj iwejif jiewafjiawejifjiwej i</p>
-      </div>
-      <div class="news_item">
-        <h2>pølse</h2>
-        <p>fkpa sdfjklæ dasæklf pasdfæikl adsipæf iæasdf iawef jiawef jiaweif jaeiwf jewiafjiawejfjeawi fji wjeifj iwejif jiewafjiawejifjiwej i</p>
-      </div>
-      <div class="news_item">
-        <h2>pølse</h2>
-        <p>fkpa sdfjklæ dasæklf pasdfæikl adsipæf iæasdf iawef jiawef jiaweif jaeiwf jewiafjiawejfjeawi fji wjeifj iwejif jiewafjiawejifjiwej i</p>
-      </div>
-      <div class="news_item">
-        <h2>pølse</h2>
-        <p>fkpa sdfjklæ dasæklf pasdfæikl adsipæf iæasdf iawef jiawef jiaweif jaeiwf jewiafjiawejfjeawi fji wjeifj iwejif jiewafjiawejifjiwej i</p>
-      </div>
-      <div class="news_item">
-        <h2>pølse</h2>
-        <p>fkpa sdfjklæ dasæklf pasdfæikl adsipæf iæasdf iawef jiawef jiaweif jaeiwf jewiafjiawejfjeawi fji wjeifj iwejif jiewafjiawejifjiwej i</p>
-      </div>
-      <div class="news_item">
-        <h2>pølse</h2>
-        <p>fkpa sdfjklæ dasæklf pasdfæikl adsipæf iæasdf iawef jiawef jiaweif jaeiwf jewiafjiawejfjeawi fji wjeifj iwejif jiewafjiawejifjiwej i</p>
-      </div>
-      <div class="news_item">
-        <h2>pølse</h2>
-        <p>fkpa sdfjklæ dasæklf pasdfæikl adsipæf iæasdf iawef jiawef jiaweif jaeiwf jewiafjiawejfjeawi fji wjeifj iwejif jiewafjiawejifjiwej i</p>
-      </div>
+      <?php
+
+      // Get the controller function data as $data
+      $data = App::make("App\Http\Controllers\NewsController")->GetAllNews();
+
+      // loop though the $data in the results array and access specific data as associative targeting
+      foreach($data as $item) {
+        echo "<div class='news_item'>";
+        echo "<h2>" . $item['title'] . "</h2>";
+        echo "<p>" . $item['content'] . "</p>";
+        echo "</div>";
+      };
+
+      ?>
     </div>
   </div>
 
