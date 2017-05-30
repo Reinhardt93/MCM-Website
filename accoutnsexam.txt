@@ -1,0 +1,23 @@
+ADMINISTRATOR OF MALL
+admin@admin.dk
+Admin
+admin
+admin
+
+TRIAL USER:
+trialuser@trialuser.dk
+Johnny
+johnny
+johnny
+
+PAID AND READY FOR BUSINESS
+shop@owner.dk
+Synoptik27
+shop
+shop
+
+EMPLOYEE ACCOUNT:
+employee@shop.dk
+Jonas
+employee
+employee
