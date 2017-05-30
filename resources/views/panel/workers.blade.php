@@ -24,12 +24,28 @@
         <li><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Bøllebob Jensen</li>
       </ul>
 
-      <a href="#" style="margin-left:49px;margin-top:25px;" id="reactbtn">Create User</a>
+
+        <?php
+            /* ADD NEW EMPLOYEE
+        // Get the controller function data as $data
+        $data = App::make("App\Http\Controllers\WorkersController")->GetUsers();
+
+        // loop though the $data in the results array and access specific data as associative targeting
+        foreach($data as $item) {
+            echo "<div>";
+            echo "<div class='shopname'>" . $item['shopName'] . "</div>";
+            echo "<div class='desciption'>" . $item['description'] . "</div>";
+            echo "<div class='openingHours'>" . $item['openingHours'] . "</div>";
+            echo "<div class='phoneNumber'>" . $item['phoneNumber'] . "</div>";
+            echo "<div class='shopImage'> <img src=/img/" . $item['shopImage'] . "> </div>";
+            echo "</div>";
+        };
+            */
+        ?>
+
     </div>
 
-    <div id="actual_news">
-
-    </div>
+      <?php echo App::make("App\Http\Controllers\CookieController")->WorkerRank();?></p>
   </div>
 
 </body>

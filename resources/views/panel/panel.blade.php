@@ -18,7 +18,9 @@
       <h1 class="c_updates">Latest Updates</h1>
     </div>
     <div id="user_info">
-
+      <div id="account_status">
+        <?php echo App::make("App\Http\Controllers\CookieController")->AccountStatus();?>
+      </div>
     </div>
     <div id="actual_news">
       <?php
@@ -38,5 +40,10 @@
     </div>
   </div>
 
+<script>
+    function Billing() {
+        alert("This is a demo, no payments implemented. Only the Shop Owner will have access to this page when it's available.");
+    }
+</script>
 </body>
 </html>

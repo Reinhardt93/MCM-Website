@@ -16,8 +16,9 @@
     </style>
 </head>
 <body>
-
-  <a href="panel">fake login</a>
+<script type="text/javascript">
+    alert("Admin Account: admin@admin.dk, admin | Shop Owner Account: shop@owner.dk, shop. | Employee Account: employee@shop.dk, employee. | Trial Account: trialuser@trialuser.dk, johnny.");
+</script>
   <div id="mcm_wrap">
     <div id="mcm_topcarrier">
       <a href="/"><img id="mcm_logo" src="img/logo2.png" alt="Mall Campaign Manager Logo"></a>
@@ -43,7 +44,7 @@
         </div>
         <div id="mcm_forgot_carrier">
           <img src="img/arrow_left.png" id="mcm_goback">
-          <h2 id="mcm_title" style="margin-top:90px;">Register</h2>
+          <h2 id="mcm_title" style="margin-top:50px;">Register</h2>
 
           <form action="registerUser" method="POST">
 
@@ -57,7 +58,7 @@
           </form>
 
       <div id="mcm_forgotpasswrap">
-        <a href="#" id="mcm_forgotpass" style="margin-left:75px;">Get help!</a>
+        <a href="#" id="mcm_forgotpass" style="margin-left:29px;font-size:13px;">Get help!</a>
       </div>
         </div>
     </div>
@@ -86,31 +87,21 @@
       <div id="mcm_news_carrier">
         <h2 id="mcm_title">Latest Updates</h2>
         <div id="mcm_news_inner">
-          <!-- Make database stuff -->
-          <div id="mcm_news_item">
-            <h2 id="mcm_title">dope 420 blaze it</h2>
-            <p id="mcm_newstext">En søgning på Lorem Ipsum afslører mange websider, som stadig er på udviklingsstadiet. Der har været et utal af variationer, som er opstået enten på grund af fejl og andre gange med vilje (som blandt andet et resultat af humor).</p>
-          </div>
 
-          <div id="mcm_news_item">
-            <h2 id="mcm_title">dope 420 blaze it</h2>
-            <p id="mcm_newstext">En søgning på Lorem Ipsum afslører mange websider, som stadig er på udviklingsstadiet. Der har været et utal af variationer, som er opstået enten på grund af fejl og andre gange med vilje (som blandt andet et resultat af humor).</p>
-          </div>
+            <?php
 
-          <div id="mcm_news_item">
-            <h2 id="mcm_title">dope 420 blaze it</h2>
-            <p id="mcm_newstext">En søgning på Lorem Ipsum afslører mange websider, som stadig er på udviklingsstadiet. Der har været et utal af variationer, som er opstået enten på grund af fejl og andre gange med vilje (som blandt andet et resultat af humor).</p>
-          </div>
+            // Get the controller function data as $data
+            $data = App::make("App\Http\Controllers\NewsController")->GetAllNews();
 
-          <div id="mcm_news_item">
-            <h2 id="mcm_title">dope 420 blaze it</h2>
-            <p id="mcm_newstext">En søgning på Lorem Ipsum afslører mange websider, som stadig er på udviklingsstadiet. Der har været et utal af variationer, som er opstået enten på grund af fejl og andre gange med vilje (som blandt andet et resultat af humor).</p>
-          </div>
+            // loop though the $data in the results array and access specific data as associative targeting
+            foreach($data as $item) {
+                echo "<div class='news_item'>";
+                echo "<h2>" . $item['title'] . "</h2>";
+                echo "<p>" . $item['content'] . "</p>";
+                echo "</div>";
+            };
 
-          <div id="mcm_news_item">
-            <h2 id="mcm_title">dope 420 blaze it</h2>
-            <p id="mcm_newstext">En søgning på Lorem Ipsum afslører mange websider, som stadig er på udviklingsstadiet. Der har været et utal af variationer, som er opstået enten på grund af fejl og andre gange med vilje (som blandt andet et resultat af humor).</p>
-          </div>
+            ?>
 
         </div>
       </div>

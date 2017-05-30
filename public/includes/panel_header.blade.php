@@ -1,7 +1,15 @@
+<?php
+if(isset($_GET['logout'])) {
+    setcookie("userInfo", null, 1);
+    header('Location: /');
+    exit;
+}
+?>
+
 <div id="youare">
   <p>Welcome<?php echo App::make("App\Http\Controllers\CookieController")->getUsername(); ?>.
     <?php echo App::make("App\Http\Controllers\CookieController")->getUserRole();?></p>
-    <a href="/" class="c_logout">(Log out)</a>
+    <a href="?logout" class="c_logout">(Log out)</a>
 
 <script type="text/javascript">
   tday=new Array("Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday");
@@ -37,16 +45,6 @@
   </div>
 </div>
 <div id="c_menu">
-  <ul>
-    <a href="panel"><li>Information</li></a>
-    <a href="workers"><li>Co-workers</li></a>
-    <a href="my_campaign"><li>Current Campaigns</li></a>
-    <a href="campaign"><li>Add New Campaign</li></a>
-  </ul>
-
 <!-- Admin Menu -->
-  <ul style="float:right;margin-right:30px;">
-    <span class="numberappr">3</span> <a href="approvals"><li>Pending Approvals</li></a>
-    <a href="companies"><li>List of Shops</li></a>
-  </ul>
+    <?php App::make("App\Http\Controllers\CookieController")->IsAdmin();?>
 </div>

@@ -39,15 +39,34 @@ if($_POST['password'] == $_POST['passwordCheck']){
                 'username' => $_POST['username'],
                 'email' => $_POST['email'],
                 'password' => $_POST['password'],
-                'userRole' => 2,
+                'userRole' => 'Shop Owner',
                 'shopID' => 2
             ]
         ]);
-        //echo $res->getBody();
+        return view('login');
 
   }else{
     return 'Passwords do not match';
   }
+});
+
+Route::post('/AddWorker', function () {
+    if($_POST['password'] == $_POST['passwordCheck']){
+        $client = new Client();
+        $res = $client->request('POST', 'http://207.154.220.153/register', [
+            'form_params' => [
+                'username' => $_POST['username'],
+                'email' => $_POST['email'],
+                'password' => $_POST['password'],
+                'userRole' => 'Employee',
+                'shopID' => $cookie->message->shopID,
+            ]
+        ]);
+        return view('panel.workers');
+
+    }else{
+        return 'Passwords do not match';
+    }
 });
 
 Route::post('/signIn', function () {
@@ -107,7 +126,12 @@ Route::get('/my_campaign', function () {
     }
 });
 Route::get('/panel', function () {
-    return view('panel.panel');
+    $cookie = app('App\Http\Controllers\CookieController');
+    if(is_null($cookie->getCookie())){
+        return view('intro');
+    }else{
+        return view('panel.panel');
+    }
 });
 Route::get('/workers', function () {
     $cookie = app('App\Http\Controllers\CookieController');

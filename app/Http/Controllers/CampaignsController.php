@@ -32,7 +32,6 @@ class CampaignsController extends Controller{
         }
     }
 
-
     public function GetAllProposedCampaigns(){
         $client = new Client(['base_uri' => 'http://207.154.220.153/']);
           $res = $client->get('/campaigns/proposal?api_token=a8b8acae610fafdaf48cb886fd67584235a68049');
