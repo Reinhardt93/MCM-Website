@@ -28,8 +28,8 @@
         echo "<div class='title'>" . $item['title'] . "</div>";
         echo "<div class='description'>" . $item['description'] . "</div>";
         echo "<div class='image'><img src='img/profiloptik.jpg'></div>";
-          echo "<div class='date'>Starts: " . $item['dateStarts'] . "</div>";
-          echo "<div class='date'>Ends: " . $item['dateEnds'] . "</div>";
+        echo "<div class='date'>Starts: " . $item['dateStarts'] . "</div>";
+        echo "<div class='date'>Ends: " . $item['dateEnds'] . "</div>";
         echo "</div>";
       };
       ?>

@@ -20,8 +20,8 @@
 
     {!! Form::open(['url' => 'sendcampaignproposal', 'files' => true]) !!}
       {!! Form::text('title', null, ['name' => 'title', 'id' => 'title', 'placeholder' => 'Title']) !!}
-      {!! Form::text('image', null, ['name' => 'image', 'placeholder' => 'image title' ]) !!}
-      {!! Form::file('image') !!}
+      {{-- {!! Form::text('image', null, ['name' => 'image', 'placeholder' => 'image title' ]) !!} --}}
+      {!! Form::file('image', null, ['name' => 'image']) !!}
       {!! Form::text('description', null, ['name' => 'description', 'placeholder' => 'Description']) !!}
       {!! Form::select('Choose shop', ['1' => 'Profiloptik', '3' => 'Theile', '4' => 'Pilgrim'], null, ['placeholder' => 'Choose a shop', 'class' => 'dropdown-list', 'name' => 'shopID']) !!}
       {!! Form::date('dateStarts', \Carbon\Carbon::now(), ['name' => 'dateStarts'] ) !!}
