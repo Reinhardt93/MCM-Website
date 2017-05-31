@@ -735,3 +735,15 @@ html, body{
   margin-left:auto;
   margin-right:auto;
 }
+
+.dropdown-list {
+  position: relative;
+  width: 96%;
+  margin-top: 10px;
+  margin-left: -19px;
+  padding: 10px;
+  background: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+  outline: none;
+}

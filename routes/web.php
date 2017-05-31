@@ -28,8 +28,19 @@ Route::get('/products', function () {
     return view('products');
 });
 Route::get('/login', function () {
-    return view('login');
+  $cookie = app('App\Http\Controllers\CookieController');
+  if(is_null($cookie->getCookie())){
+      return view('login');
+  }else{
+      return view('panel.panel');
+  }
+
 });
+Route::get('/404', function(){
+  return view('404');
+});
+
+Route::get('/logout', 'CookieController@removeCookie');
 
 Route::post('/registerUser', function () {
 if($_POST['password'] == $_POST['passwordCheck']){
@@ -70,6 +81,7 @@ Route::post('/AddWorker', function () {
 });
 
 Route::post('/signIn', function () {
+  // Start a new Guzzle client and send form data to sign in
   $client = new Client();
         $res = $client->request('POST', 'http://207.154.220.153/login', [
             'form_params' => [
@@ -78,12 +90,21 @@ Route::post('/signIn', function () {
             ]
         ]);
 
-        if($res->getStatusCode() == 200){
+        // Decode the response from the API and turn into an assoc array
+        $login = json_decode($res->GetBody()->GetContents(), true);
+
+        // Check if response has api_token
+        if(isset($login['api_token'])) {
+
+          // Call the Cookie Controller
           $cookie = app('App\Http\Controllers\CookieController');
           $body = json_decode($res->getBody());
+
+          // Set the cookie with the body from the API response
           return $cookie->setCookie($body);
         }else{
-          return 'Username or Password is incorrect, please try again.';
+          // If login is incorrect redirect back to /login route
+          return redirect('/login');
         }
 });
 
@@ -106,6 +127,8 @@ Route::get('/campaign', function () {
     }
 });
 Route::post('/sendcampaignproposal', 'CampaignsController@SendCampaignProposal');
+Route::get('/activate/{id}', 'CampaignsController@ApproveCampaign');
+Route::get('/decline/{id}', 'CampaignsController@DeclineCampaign');
 
 Route::get('/companies', function () {
     $cookie = app('App\Http\Controllers\CookieController');

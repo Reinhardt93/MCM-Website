@@ -17,13 +17,13 @@ class CookieController extends Controller {
    }
 
     public function getUsername(){
-    $cookie = cookie::get('userInfo');
-    if(isset($cookie)) {
-        return ', ' . $cookie->message->username;
-    } else {
-        return '';
+      $cookie = cookie::get('userInfo');
+      if(isset($cookie)) {
+          return ', ' . $cookie->message->username;
+      } else {
+          return '';
+      }
     }
-}
 
     public function getUserRole(){
         $cookie = cookie::get('userInfo');
@@ -32,6 +32,11 @@ class CookieController extends Controller {
         } else {
             return '';
         }
+    }
+
+    public function removeCookie(){
+      $cookie = cookie::forget('userInfo');
+      return redirect('/')->withCookie($cookie);
     }
 
     public function IsAdmin(){
@@ -120,7 +125,7 @@ class CookieController extends Controller {
             ';
         } else{
             echo '
-  
+
             ';
         }
     }
@@ -132,7 +137,7 @@ class CookieController extends Controller {
                 <img src="img/logo.png">
                 <p>You\'re currently logged in with an <span>Admin</span> account.</p>
                 <p>You have full access across the control panel.</p>
-                <p>Your next billing is due SOME DAY</p>
+                <p>Your next billing is due 01/07/2017</p>
             ';
         } else if(isset($cookie) && $cookie->message->userRole == 'Employee'){
             echo '

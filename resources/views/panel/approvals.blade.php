@@ -29,10 +29,10 @@
         echo "<div class='description'>" . $item['description'] . "</div>";
         echo "<div class='image'><img src='img/profiloptik.jpg'></div>";
 
-        echo'  <a href="#" style="float:left;" id="reactbtn">Decline</a>';
-          echo'  <a href="#" style="float:right;" id="reactbtn">Approve</a>';
-          echo "<div class='date'>Starts: " . $item['dateStarts'] . "</div>";
-          echo "<div class='date'>Ends: " . $item['dateEnds'] . "</div>";
+        echo '<a href="decline/' . $item['campaignID'] . '" style="float:left;" id="reactbtn">Decline</a>';
+        echo '<a href="activate/' . $item['campaignID'] . '" style="float:right;" id="reactbtn">Approve</a>';
+        echo "<div class='date'>Starts: " . $item['dateStarts'] . "</div>";
+        echo "<div class='date'>Ends: " . $item['dateEnds'] . "</div>";
         echo "</div>";
       };
       ?>

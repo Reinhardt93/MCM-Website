@@ -7,9 +7,9 @@ if(isset($_GET['logout'])) {
 ?>
 
 <div id="youare">
-  <p>Welcome<?php echo App::make("App\Http\Controllers\CookieController")->getUsername(); ?>.
+  <p>Welcome<?php print_r(App::make("App\Http\Controllers\CookieController")->getUsername()); ?>.
     <?php echo App::make("App\Http\Controllers\CookieController")->getUserRole();?></p>
-    <a href="?logout" class="c_logout">(Log out)</a>
+    <a href="/logout" class="c_logout">(Log out)</a>
 
 <script type="text/javascript">
   tday=new Array("Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday");

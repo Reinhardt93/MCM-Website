@@ -17,30 +17,15 @@
       <h1 class="c_name">Add New Campaign</h1>
     </div>
 
-    <!-- <form class="cf" action="/sendcampaignproposal" method="post">
-       {{ csrf_field() }}
-      <div class="half left cf">
-        <input type="text" id="input-name" placeholder="Name of Campaign">
-        <input type="text" id="input-image" placeholder="image path">
-        <input type="text" id="input-shopID" placeholder="Anything Else?">
-        <p style="padding-top:10px;">Select Start and End Date</p>
-        <input type="date" id="input-dateStarts" name="bday" max="2050-01-01">
-        <input type="date" id="input-dateEnds" name="bday" min="2017-01-01">
-      </div>
-      <div class="half right cf">
-        <textarea name="message" type="text" id="input-description" placeholder="description"></textarea>
-        <input type="file" name="pic" accept="image/*">
-      </div>
-      <input style="width:100%;padding:8px;" type="submit" value="Submit Campaign" id="reactbtn">
-    </form> -->
 
-    {!! Form::open(['url' => 'sendcampaignproposal']) !!}
-      {!! Form::text('title', 'title', ['id' => 'title']) !!}
-      {!! Form::text('image', 'image here', ['id' => 'image']) !!}
-      {!! Form::text('description', 'description', ['id' => 'description']) !!}
-      {!! Form::text('shopID', 'shopID', ['id' => 'shopID']) !!}
-      {!! Form::date('dateStarts', \Carbon\Carbon::now(), ['id' => 'dateStarts'] ) !!}
-      {!! Form::date('dateEnds', \Carbon\Carbon::now(), ['id' => 'dateEnds']) !!}
+    {!! Form::open(['url' => 'sendcampaignproposal', 'files' => true]) !!}
+      {!! Form::text('title', null, ['name' => 'title', 'id' => 'title', 'placeholder' => 'Title']) !!}
+      {!! Form::text('image', null, ['name' => 'image', 'placeholder' => 'image title' ]) !!}
+      {!! Form::file('image') !!}
+      {!! Form::text('description', null, ['name' => 'description', 'placeholder' => 'Description']) !!}
+      {!! Form::select('Choose shop', ['1' => 'Profiloptik', '3' => 'Theile', '4' => 'Pilgrim'], null, ['placeholder' => 'Choose a shop', 'class' => 'dropdown-list', 'name' => 'shopID']) !!}
+      {!! Form::date('dateStarts', \Carbon\Carbon::now(), ['name' => 'dateStarts'] ) !!}
+      {!! Form::date('dateEnds', \Carbon\Carbon::now(), ['name' => 'dateEnds']) !!}
       {!! Form::submit('Click Me!') !!}
     {!! Form::close() !!}
 
