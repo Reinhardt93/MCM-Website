@@ -16,7 +16,6 @@ class CampaignsController extends Controller{
     }
 
     public function SendCampaignProposal(){
-
         $path = request()->file('image')->store('/img');
         $client = new Client(['base_uri' => 'http://207.154.220.153/']);
         $res = $client->request('POST', '/campaigns/proposal/create?api_token=38e8e92c1694bcc8e77895592280eb2d6a27819c',[
@@ -30,7 +29,7 @@ class CampaignsController extends Controller{
             ]
         ]);
         if($res->getStatusCode() == 200){
-          return view('panel.campaign');
+          return back();
         }
     }
 

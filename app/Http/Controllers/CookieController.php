@@ -53,7 +53,7 @@ class CookieController extends Controller {
               <li onclick="Billing()">Billing</li>
               </ul>
             ';
-        } else if(isset($cookie) && $cookie->message->userRole == 'Employee'){
+        }else if(isset($cookie) && $cookie->message->userRole == 'Employee'){
             echo '
               <ul>
               <a href="panel"><li>Information</li></a>
@@ -62,7 +62,7 @@ class CookieController extends Controller {
               <a href="campaign"><li>Add New Campaign</li></a>
               </ul>
              ';
-        } else{
+        }else{
             echo '
               <ul>
               <a href="panel"><li>Information</li></a>
